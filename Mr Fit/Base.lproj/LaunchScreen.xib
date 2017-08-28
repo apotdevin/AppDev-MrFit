@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69s-mo-L3Y">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                    <color key="backgroundColor" red="1" green="0.72549019607843135" blue="0.031372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 Anthony Potdevin. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
+                    <rect key="frame" x="20" y="439" width="441" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="0cN-u7-MC0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="Aec-Xy-lgL">
+                    <rect key="frame" x="71" y="102" width="338" height="275"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="310" id="0Yy-zi-xQu"/>
+                        <constraint firstAttribute="width" secondItem="Aec-Xy-lgL" secondAttribute="height" multiplier="282:229" id="rmL-HF-20U"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Aec-Xy-lgL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="180" id="3M5-Hx-7t8"/>
+                <constraint firstItem="69s-mo-L3Y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9mu-bA-OCf"/>
+                <constraint firstAttribute="bottom" secondItem="69s-mo-L3Y" secondAttribute="bottom" id="GAH-4r-Hgb"/>
+                <constraint firstItem="69s-mo-L3Y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IZl-rl-HBe"/>
+                <constraint firstAttribute="centerX" secondItem="Aec-Xy-lgL" secondAttribute="centerX" id="JmE-t5-plq"/>
+                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
+                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
+                <constraint firstAttribute="trailing" secondItem="8ie-xW-0ye" secondAttribute="trailing" constant="19" id="a5V-52-wK1"/>
+                <constraint firstItem="Aec-Xy-lgL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="99" id="h4U-yP-Ngk"/>
+                <constraint firstAttribute="trailing" secondItem="Aec-Xy-lgL" secondAttribute="trailing" constant="99" id="ppW-Ft-HzG"/>
+                <constraint firstAttribute="trailing" secondItem="69s-mo-L3Y" secondAttribute="trailing" id="sb6-3p-OwV"/>
+                <constraint firstAttribute="centerY" secondItem="Aec-Xy-lgL" secondAttribute="centerY" id="tVy-YF-cnB"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="Aec-Xy-lgL" secondAttribute="bottom" constant="85" id="ybw-9x-0mn"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="3M5-Hx-7t8"/>
+                    <exclude reference="h4U-yP-Ngk"/>
+                    <exclude reference="ppW-Ft-HzG"/>
+                    <exclude reference="ybw-9x-0mn"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="548" y="455"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="launchImage" width="615" height="500"/>
+    </resources>
+</document>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Mr_Fit_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="c6M-Y2-JiT">
+                            <items>
+                                <tableRow identifier="WorkoutRow" id="nTw-5z-eLR" customClass="WorkoutRow" customModule="Mr_Fit_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="Rf2-sd-2A9">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Workout" minimumScaleFactor="0.10000000000000001" id="teM-S1-dgz">
+                                                <fontDescription key="font" type="system" pointSize="17"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="group" destination="Rf2-sd-2A9" id="hsi-qA-Npl"/>
+                                        <outlet property="workoutLabel" destination="teM-S1-dgz" id="axv-G9-7to"/>
+                                        <segue destination="7oq-BS-1gk" kind="push" identifier="WorkoutSets" id="5E8-9n-bt8"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="CustomWorkoutRow" id="XUH-Cs-55P" customClass="CustomWorkoutRow" customModule="Mr_Fit_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="pWF-za-owy">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Custom Workout" minimumScaleFactor="0.10000000000000001" id="WlT-tB-Hkc">
+                                                <fontDescription key="font" type="system" pointSize="17"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="group" destination="pWF-za-owy" id="llq-X3-9Y3"/>
+                                        <outlet property="workoutLabel" destination="WlT-tB-Hkc" id="igh-yZ-w3t"/>
+                                        <segue destination="zk2-FD-6d1" kind="push" identifier="CustomWorkout" id="XU5-Fx-hUA"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="c6M-Y2-JiT" id="hnm-em-1Gs"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="32" y="416"/>
+        </scene>
+        <!--Sets Interface Controller-->
+        <scene sceneID="Emr-9e-mJw">
+            <objects>
+                <controller id="7oq-BS-1gk" customClass="SetsInterfaceController" customModule="Mr_Fit_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Sets:" textAlignment="center" numberOfLines="2" id="CQI-MM-CDJ">
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                        </label>
+                        <table alignment="left" id="hIM-Zb-eHO">
+                            <items>
+                                <tableRow identifier="SetRow" id="oUu-as-ONY" customClass="SetRow" customModule="Mr_Fit_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="3rw-I7-GK0">
+                                        <items>
+                                            <label width="30" height="1" alignment="left" text="1" textAlignment="center" id="I65-qR-uww">
+                                                <fontDescription key="font" type="system" pointSize="25"/>
+                                            </label>
+                                            <label height="1" alignment="left" text="Label" textAlignment="left" minimumScaleFactor="0.5" id="lrQ-tu-M5h">
+                                                <fontDescription key="font" type="system" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="group" destination="3rw-I7-GK0" id="mu5-vF-5JP"/>
+                                        <outlet property="numberLabel" destination="I65-qR-uww" id="RQY-HS-tKd"/>
+                                        <outlet property="setLabel" destination="lrQ-tu-M5h" id="2hn-5I-g37"/>
+                                        <segue destination="rX4-HT-bIO" kind="push" identifier="startWorkout" id="VC7-7u-zCd"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="setsTable" destination="hIM-Zb-eHO" id="Mcw-5F-5Sq"/>
+                        <outlet property="titleLabel" destination="CQI-MM-CDJ" id="hpi-yl-bZh"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="251" y="416"/>
+        </scene>
+        <!--Custom Interface Controller-->
+        <scene sceneID="tJ0-2i-El2">
+            <objects>
+                <controller id="zk2-FD-6d1" customClass="CustomInterfaceController" customModule="Mr_Fit_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Exercise Time:" numberOfLines="2" id="3FP-DU-hBS">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                        <slider width="1" alignment="left" value="1" maximum="15" steps="15" id="VsT-jd-BgN">
+                            <connections>
+                                <action selector="exerciseTimeSliderChanged:" destination="zk2-FD-6d1" id="0tQ-2r-8Uh"/>
+                            </connections>
+                        </slider>
+                        <label width="1" alignment="left" text="Rest Time:" numberOfLines="2" id="kZk-Lf-V4m">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                        <slider width="1" alignment="left" value="1" maximum="15" steps="15" id="3r8-dS-W6B">
+                            <connections>
+                                <action selector="restTimeSliderChanged:" destination="zk2-FD-6d1" id="m6R-kO-LCP"/>
+                            </connections>
+                        </slider>
+                        <label width="1" alignment="left" text="Repetitions:" numberOfLines="2" id="KI1-GA-pig">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                        <slider width="1" alignment="left" value="1" maximum="15" steps="15" id="nU0-Pn-hP6">
+                            <connections>
+                                <action selector="repetitionsSliderChanged:" destination="zk2-FD-6d1" id="fuJ-CM-lbd"/>
+                            </connections>
+                        </slider>
+                        <separator alignment="left" id="hsl-xi-XxJ"/>
+                        <button width="1" alignment="left" title="Start" id="d10-ab-tY5">
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                            <connections>
+                                <segue destination="Xt9-YF-Txe" kind="push" id="8cC-UK-dzD"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="TwG-71-N64"/>
+                    </items>
+                    <connections>
+                        <outlet property="exerciseTimeLabel" destination="3FP-DU-hBS" id="C2g-Tf-Oa7"/>
+                        <outlet property="exerciseTimeSlider" destination="VsT-jd-BgN" id="fZu-lY-36b"/>
+                        <outlet property="repetitionsLabel" destination="KI1-GA-pig" id="K01-32-IlM"/>
+                        <outlet property="repetitionsSlider" destination="nU0-Pn-hP6" id="yv8-s6-maW"/>
+                        <outlet property="restTimeLabel" destination="kZk-Lf-V4m" id="7fc-gU-gDk"/>
+                        <outlet property="restTimeSlider" destination="3r8-dS-W6B" id="RyX-Na-bdR"/>
+                        <outlet property="startButton" destination="d10-ab-tY5" id="t37-Hp-bLa"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="251" y="732.5"/>
+        </scene>
+        <!--Start Interface Controller-->
+        <scene sceneID="mMQ-XE-fyd">
+            <objects>
+                <controller id="rX4-HT-bIO" customClass="StartInterfaceController" customModule="Mr_Fit_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="V0a-Tz-w1Y">
+                            <items>
+                                <label alignment="left" text="Set: 1-1" numberOfLines="2" id="kML-sL-lGe">
+                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                </label>
+                                <label alignment="right" text="Exercise: 1-12" numberOfLines="2" id="h3v-nN-vQR">
+                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label width="1" alignment="left" text="27" textAlignment="center" minimumScaleFactor="0.5" id="gCo-rQ-8Y0">
+                            <fontDescription key="font" type="system" pointSize="80"/>
+                        </label>
+                        <group width="1" alignment="left" id="H7t-jE-gUa">
+                            <items>
+                                <label alignment="center" verticalAlignment="bottom" text="Jumping Jacks" textAlignment="center" numberOfLines="2" id="ZKZ-DM-iDU">
+                                    <fontDescription key="font" type="system" pointSize="16"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="exerciseLabel" destination="h3v-nN-vQR" id="X6x-gh-5i6"/>
+                        <outlet property="nameLabel" destination="ZKZ-DM-iDU" id="bwP-1D-KH8"/>
+                        <outlet property="setLabel" destination="kML-sL-lGe" id="Jec-Fd-1Hi"/>
+                        <outlet property="timerLabel" destination="gCo-rQ-8Y0" id="VKt-si-GuJ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="470" y="416"/>
+        </scene>
+        <!--Custom Start Interface Controller-->
+        <scene sceneID="r8F-Qw-P5v">
+            <objects>
+                <controller id="Xt9-YF-Txe" customClass="CustomStartInterfaceController" customModule="Mr_Fit_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Repetitions: 1-5" textAlignment="center" numberOfLines="2" id="mIH-w4-cQD">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                        <label width="1" alignment="left" text="30" textAlignment="center" minimumScaleFactor="0.5" id="60y-Bw-RAE">
+                            <fontDescription key="font" type="system" pointSize="80"/>
+                        </label>
+                        <label width="1" alignment="left" text="Get Ready!" textAlignment="center" id="gly-38-JNb">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="repetitionsLabel" destination="mIH-w4-cQD" id="7J8-7u-j5J"/>
+                        <outlet property="timerLabel" destination="60y-Bw-RAE" id="sPc-tF-BM6"/>
+                        <outlet property="titleLabel" destination="gly-38-JNb" id="kkF-Sm-6AO"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="470" y="733"/>
+        </scene>
+    </scenes>
+</document>

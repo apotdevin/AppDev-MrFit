@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Mr Fit WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Mr Fit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>8A362D441ABFD5DC00096694</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A362D591ABFD5DC00096694</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A5732EB1B1405D300AA61B1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8AAE1B771B0AD2C60009D983</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

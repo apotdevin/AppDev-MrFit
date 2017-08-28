@@ -1,0 +1,23 @@
+PODS:
+  - Bolts/Tasks (1.1.5)
+  - CocoaSecurity (1.2.4)
+  - Parse (1.7.2.2):
+    - Bolts/Tasks (>= 1.1.5)
+  - ParseUI (1.1.3):
+    - Parse (~> 1.7)
+  - SecureNSUserDefaults (1.0.0):
+    - CocoaSecurity (~> 1.2.1)
+
+DEPENDENCIES:
+  - Parse
+  - ParseUI
+  - SecureNSUserDefaults
+
+SPEC CHECKSUMS:
+  Bolts: aac24961496d504aa56fc267cde95162a71bac39
+  CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
+  Parse: 6187586a80eb7b4960d755f85e1353148a611f87
+  ParseUI: 1a68e9cebc3bd458eed9605ce7b33d7cc082f473
+  SecureNSUserDefaults: 60a27d6e7fd2cad47448fef5dea22803e098433a
+
+COCOAPODS: 0.37.1
